@@ -9,7 +9,7 @@
 }
 .movieImage{
   border-radius: 10px;
-  /*background-color: azure;*/
+  background-color: azure;
 }
 
 @media (max-width: 560px) {
