@@ -2,3 +2,13 @@
   display: flex;
   justify-content: center;
 }
+
+.spining{
+  animation: spiner 1s linear infinite;
+}
+
+@keyframes spiner {
+  to{
+    transform: rotate(360deg);
+  }
+}
