@@ -3,12 +3,14 @@ import { useParams } from "react-router-dom";
 import styles from "./MovieDetails.module.css"
 import { get } from "../utils/httpClient"
 import { Spiner } from "../components/Spiner";
+import { useQuery } from "../hooks/useQuery";
 
 export function MovieDetails(){
   
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(true)
+
   useEffect(() => {
     setIsLoading(true);
     get("/movie/" + movieId).then(data => {

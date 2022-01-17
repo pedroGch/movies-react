@@ -4,11 +4,7 @@ import styles from "./MoviesGrid.module.css"
 import {MovieCard} from "./MovieCard"
 import { get } from "../utils/httpClient"
 import { Spiner } from "../components/Spiner"
-import { useLocation } from "react-router-dom";
-
-function useQuery(){
-  return new URLSearchParams(useLocation().search)
-}
+import { useQuery } from "../hooks/useQuery";
 
 export function MoviesGrid(){
   const [movies, setMovies] = useState([]);
